@@ -1,0 +1,27 @@
+.todo-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+
+    form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        
+        input, select {
+            flex: 1;
+            padding: 8px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

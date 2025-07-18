@@ -1,0 +1,81 @@
+# Root-level
+node_modules/
+dist/
+.idea/
+.vscode/
+.DS_Store
+.env
+*.log
+*.tmp
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+
+# --- FRONTEND (Angular 20) ---
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/cache/
+/frontend/.angular/*
+/frontend/.output/
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.*.local
+/frontend/.npmrc
+
+# --- BACKEND (Java 21 Spring Boot) ---
+/backend/target/
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+/backend/.mvn/
+/backend/mvnw
+/backend/mvnw.cmd
+/backend/*.iml
+/backend/logs/
+/backend/*.log
+/backend/hs_err_pid*.log
+/backend/.env
+/backend/**/*application.properties
+
+# --- Optional OS + Tooling ---
+*.swp
+*.swo
+*.bak
+*.rej
+*.orig
+*.patch
+
+# JetBrains IDEs (IntelliJ, etc.)
+**/.idea/
+**/*.iml
+
+# Eclipse
+**/.classpath
+**/.project
+**/.settings/
+
+# VS Code
+**/.vscode/
+
+# MacOS
+**/.DS_Store
+
+# Windows
+**/Thumbs.db
+**/ehthumbs.db
+
+# Logs
+logs/
+*.log
+
+# Runtime files
+*.pid
+
+# Build output
+build/
+out/
+
+# Temporary files
+tmp/
+temp/
