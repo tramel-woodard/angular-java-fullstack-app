@@ -1,0 +1,19 @@
+<div class="todo-container">
+    <h2>Todo List</h2>
+    <form (ngSubmit)="save()">
+        <input [(ngModel)]="form.name" name="name" placeholder="Todo Name" required />
+        <select [(ngModel)]="form.priority" name="priority">
+            <option *ngFor="let p of priorities" [value]="p">{{ p }}</option>
+        </select>
+        <button type="submit">{{ editingId ? 'Update' : 'Add' }}</button>
+        <button type="button" (click)="reset()" *ngIf="editingId">Cancel</button>
+    </form>
+
+    <ul>
+        <li *ngFor="let todo of todos">
+            <strong>{{ todo.name }}</strong> - <em>{{ todo.priority }}</em>
+            <button (click)="edit(todo)">Edit</button>
+            <button (click)="delete(todo.id!)">Delete</button>
+        </li>
+    </ul>
+</div>
