@@ -1,2 +1,7 @@
-
-<router-outlet />
+<mat-toolbar color="primary">
+    <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</button>
+    <button mat-button routerLink="/about" routerLinkActive="active">About</button>
+</mat-toolbar>
+<main style="padding: 1rem;">
+    <router-outlet />
+</main>

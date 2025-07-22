@@ -1,0 +1,26 @@
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .about-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .about-text {
+            flex: 1;
+            line-height: 2rem;
+        }
+
+        .about-image {
+            flex-shrink: 0;
+
+            img {
+                max-width: 250px;
+                height: auto;
+                border-radius: 8px;
+            }
+        }
+    }
+}

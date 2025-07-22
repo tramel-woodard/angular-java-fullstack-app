@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use '@angular/material/core/m2' as m2;
+@use '@angular/material/core/theming/all-theme' as all-theme;
+
+// Angular 20 modifications (until material is fully 20 compatible)
+
+// m2 theming setup (required for 'define-palette', etc.)
+$my-primary: m2.define-palette(m2.$teal-palette);
+$my-accent: m2.define-palette(m2.$amber-palette);
+$my-warn: m2.define-palette(m2.$red-palette);
+
+$my-theme: m2.define-light-theme((
+    color: (
+        primary: $my-primary,
+        accent: $my-accent,
+        warn: $my-warn
+    ),
+    typography: m2.define-typography-config(),
+    density: 0
+));
+
+// including all component styles (m2)
+@include all-theme.all-component-themes($my-theme);
+
+// global styles
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: #f9f9f9;
+}
